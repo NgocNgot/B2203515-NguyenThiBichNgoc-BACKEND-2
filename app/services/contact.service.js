@@ -55,7 +55,7 @@ class ContactService {
             { $set: update },
             { returnDocument: "after" }
         );
-        return result.value;
+        return result;
     }
     async delete(id) {
         const result = await this.Contact.findOneAndDelete({
